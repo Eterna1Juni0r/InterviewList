@@ -33,6 +33,7 @@ const addNewInterview = async (): Promise<void> => {
     contactPhone: contactPhone.value,
     contactWhatsApp: contactWhatsApp.value,
     createdAt: new Date(),
+    stages: [],
   }
 
   if (userStore.userId) {

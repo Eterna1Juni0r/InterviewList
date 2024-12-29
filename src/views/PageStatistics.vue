@@ -20,7 +20,7 @@ const userStore = useUserStore()
 const db = getFirestore()
 const interviews = ref<IInterview[]>([])
 const chartData = ref()
-const chartOptions = ref(null)
+const chartOptions = ref<object | null>(null)
 
 const setChartData = () => {
   const documentStyle = getComputedStyle(document.body)
