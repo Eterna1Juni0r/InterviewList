@@ -15,20 +15,20 @@ const checkAuth = (
       next()
     } else if (!user && !isAuth) {
       isAuth = true
-      next('/auth')
+      next('/')
     }
   })
 }
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: () => import('@/views/PageHome.vue'),
     beforeEnter: checkAuth,
   },
   {
-    path: '/auth',
+    path: '/',
     name: 'Auth',
     component: () => import('@/views/PageAuth.vue'),
   },

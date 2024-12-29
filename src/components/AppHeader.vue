@@ -18,13 +18,13 @@ const items = ref<IMenuItem[]>([
   {
     label: 'Авторизация',
     icon: 'pi pi-user',
-    path: '/auth',
+    path: '/',
     show: computed((): boolean => !userStore.userId),
   },
   {
     label: 'Добавить',
     icon: 'pi pi-plus',
-    path: '/',
+    path: '/home',
     show: computed((): boolean => !!userStore.userId),
   },
   {
@@ -43,7 +43,7 @@ const items = ref<IMenuItem[]>([
 
 const signOutMethod = async (): Promise<void> => {
   await signOut(getAuth())
-  router.push('/auth')
+  router.push('/')
 }
 </script>
 
