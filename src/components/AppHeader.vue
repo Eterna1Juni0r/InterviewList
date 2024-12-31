@@ -18,13 +18,13 @@ const items = ref<IMenuItem[]>([
   {
     label: 'Авторизация',
     icon: 'pi pi-user',
-    path: '/',
+    path: '/auth',
     show: computed((): boolean => !userStore.userId),
   },
   {
     label: 'Добавить',
     icon: 'pi pi-plus',
-    path: '/home',
+    path: '/',
     show: computed((): boolean => !!userStore.userId),
   },
   {

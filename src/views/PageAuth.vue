@@ -29,7 +29,7 @@ const signUp = async (): Promise<void> => {
   isLoading.value = true
   try {
     await createUserWithEmailAndPassword(getAuth(), email.value, password.value)
-    router.push('/home')
+    router.push('/')
   } catch (error: unknown) {
     if (error instanceof Error) {
       toast.add({ severity: 'error', summary: 'Error', detail: error.message, life: 4000 })
@@ -42,7 +42,7 @@ const signIn = async (): Promise<void> => {
   isLoading.value = true
   try {
     await signInWithEmailAndPassword(getAuth(), email.value, password.value)
-    router.push('/home')
+    router.push('/')
   } catch (error: unknown) {
     if (error instanceof Error) {
       toast.add({ severity: 'error', summary: 'Error', detail: error.message, life: 4000 })
