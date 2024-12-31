@@ -43,7 +43,7 @@ const items = ref<IMenuItem[]>([
 
 const signOutMethod = async (): Promise<void> => {
   await signOut(getAuth())
-  router.push('/')
+  router.push('/auth')
 }
 </script>
 
